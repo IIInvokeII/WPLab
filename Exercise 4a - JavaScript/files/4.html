@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript form validation - checking non-empty</title>
+</head>
+
+<body>
+    <style>
+        li {
+            list-style-type: none;
+            font-size: 16pt;
+        }
+
+        .mail {
+            margin: auto;
+            margin-top: 10%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 400px;
+            background:
+                #D8F1F8;
+            border: 1px soild silver;
+        }
+
+        .mail h2 {
+            margin-left: 38px;
+        }
+
+        input {
+            font-size: 20pt;
+        }
+
+        input:focus,
+        textarea:focus {
+            background-color:
+                lightyellow;
+        }
+
+        input submit {
+            font-size: 12pt;
+        }
+
+        .rq {
+            color:
+                #FF0000;
+            font-size: 10pt;
+        }
+    </style>
+    <div class="mail">
+        <h2>Input your Name and Submit</h2>
+        <form name="form1" action="#" onsubmit="required()">
+            <ul>
+                <li><input type='text' name='text1' /></li>
+                <li class="rq">*Required Field</li>
+                <li><input type="submit" name="submit" value="Submit" /></li>
+            </ul>
+        </form>
+    </div>
+    <script>
+        function required() {
+            var empt = document.forms["form1"]["text1"].value;
+            if (empt == "") {
+                alert("Please input a Value");
+                return false;
+            }
+            else {
+                alert('Code has accepted : you can try another');
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

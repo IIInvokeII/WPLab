@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>RegEx Form Validation</title>
+</head>
+<body align="center">
+	<h1>Registration Form</h1>
+	<form name="myform"  method="post" onsubmit="return formValidation()" action="jsregexassgn_suc.html">
+		<label for="uid">User ID:</label>
+		<input type="text" name="uid" id="uid" required>
+		<br>
+		<br>
+		<label for="pwd">Password</label>
+		<input type="password" name="pwd" id="pwd" required>
+		<br>
+		<br>
+		<label for="cntry">Country:</label>
+		<select id="country" name="country" required>
+		   <option selected="">(Please select a country)</option>
+		   <option value="Australia">Australia</option>
+		   <option value="Barbados">Barbados</option>
+		   <option value="Belgium">Belgium</option>
+		   <option value="Benin">Benin</option>
+		   <option value="Bermuda">Bermuda</option>
+		   <option value="Brunei">Brunei</option>
+		   <option value="Canada">Canada</option>
+		   <option value="Cape Verde">Cape Verde</option>
+		   <option value="China">China</option>
+		   <option value="Denmark">Denmark</option>
+		   <option value="Egypt">Egypt</option>
+		   <option value="Finland">Finland</option>
+		   <option value="France">France</option>
+		   <option value="Germany">Germany</option>
+		   <option value="Great Britain">Great Britain</option>
+		   <option value="Greece">Greece</option>
+		   <option value="Hong Kong">Hong Kong</option>
+		   <option value="India">India</option>
+		   <option value="Japan">Japan</option>
+		   <option value="Macedonia">Macedonia</option>
+		   <option value="New Zealand">New Zealand</option>
+		   <option value="Romania">Romania</option>
+		   <option value="Russia">Russia</option>
+		   <option value="United Kingdom">United Kingdom</option>
+		   <option value="Ukraine">Ukraine</option>
+		   <option value="United Arab Erimates">United Arab Emirates</option>
+		   <option value="United States of America">United States of America</option>
+		</select>
+		<br>
+		<br>
+		<label for="zip">Zip Code:</label>
+		<input type="number" name="zip" id="zip" required>
+		<br>
+		<br>
+		<label for="email1">Email:</label>
+		<input type="email" name="email1" id="email1" required>
+		<br>
+		<br>
+		<h3>Sex:</h3>
+		<input type="radio" name="sex" id="sex" value="male" required>
+		<label for ="male">Male</label>
+		<input type="radio" name="sex" id="sex" value="female" required>
+		<label for ="female">Female</label>
+		<br>
+		<br>
+		<input type="checkbox" name="en" value="en" checked /><span>English</span>
+		<input type="checkbox" name="nonen" value="noen" /><span>Non English</span>
+		<br>
+		<br>
+		<label for="about">About:</label>
+		<textarea placeholder="Type something about you if you wish to"></textarea>
+		<br>
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+<script type="text/javascript">
+	function formValidation(){
+		var uid = document.myform.uid;
+		var passid = document.myform.pwd;
+		var ucountry = document.myform.country;
+		var uzip = document.myform.zip;
+		var uemail = document.myform.email;
+		var umsex = document.myform.sex;
+		if(userid_validation(uid,5,12)){
+			if(passid_validation(passid,7,12)){
+				if(allLetter(uid)){
+						if(countryselect(ucountry)){
+							if(allnumeric(uzip)){
+								if(ValidateEmail(uemail)){
+								} 
+							}
+						} 
+				}
+			}
+		}
+		return false;
+	}
+	function userid_validation(uid,mx,my){
+		var uid_len = uid.value.length;
+		if (uid_len == 0 || uid_len >= my || uid_len < mx){
+			window.alert("User Id should not be empty / length be between "+mx+" to "+my);
+			uid.focus();
+			return false;
+		}
+		return true;
+	}
+	function passid_validation(passid,mx,my){
+		var passid_len = passid.value.length;
+		if (passid_len == 0 ||passid_len >= my || passid_len < mx){
+			window.alert("Password should not be empty / length be between "+mx+" to "+my);
+			passid.focus();
+			return false;
+		}
+		return true;
+	}
+	function countryselect(ucountry){
+		if(ucountry.value == "Default"){
+			window.alert('Select your country from the list');
+			ucountry.focus();
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	function allnumeric(uzip){ 
+		var numbers = /^[0-9]+$/;
+		if(uzip.value.match(numbers)){
+			return true;
+		}
+		else{
+			window.alert('ZIP code must have numeric characters only');
+			uzip.focus();
+			return false;
+		}
+	}
+	function ValidateEmail(uemail){
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if(uemail.value.match(mailformat)){
+			return true;
+		}
+		else{
+			window.alert("You have entered an invalid email address!");
+			uemail.focus();
+			return false;
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Odd numbers</title>
+</head>
+
+<body>
+    <label id="odd"></label>
+</body>
+
+<script>
+    let num = prompt("Enter the number?");
+    num = parseInt(num);
+    var e = "<hr/>";
+    for (let i = 1; i < num; i++) {
+        if (i % 2 != 0) {
+            e += + i + "</br>";
+        }
+    }
+    document.getElementById('odd').innerHTML = '<b>' + e + '</b>'; 
+</script>
+
+</html>

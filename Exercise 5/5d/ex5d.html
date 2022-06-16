@@ -1,0 +1,59 @@
+<!doctye html>
+<html lang="en">
+	<head>
+		<title>Form Validation using Angular JS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="ex5dstyle.css">
+	</head>
+	<body ng-app="myApp">
+		<h3>Student Form</h3>
+	
+		<fieldset class="container">
+		<legend>Basic Details of a student</legend>
+		<form name="myForm" action="dinesh.b.2k1@gmail.com">
+				<div class="{{myForm.name1.$valid}}">
+					<label for="name">Name</label>
+					<input type="text" ng-model="name1"ng-pattern="/^[a-zA-Z\s]*$/" name="name1" required>
+				</div>
+				<br>
+				<br>
+				<div class="{{myForm.email.$valid}}">
+					<label for="email">Email</label>
+					<input type="email" id="email" ng-model="email" name="email" required>
+				</div>
+				<br>
+				<br>
+				<div class="{{myForm.addr1.$valid}}">
+					<label for="addr1">Address line -1</label>
+					<input type="text" id="addr1" ng-model="addr1" name="addr1" required>
+				</div>
+				<br>
+				<br>
+				<div class="{{myForm.addr2.$valid}}">
+					<label for="addr2">Address Line -2</label>
+					<input type="text" id="addr2" ng-model="addr2" name="addr2" required>
+				</div>
+				<br>
+				<br>
+				<div class="{{myForm.xscore.$valid}}">
+					<label for="xscore">10th CGPA</label>
+					<input type="number" id="xscore" step="0.2" ng-model="xscore" name="xscore" max="10" required>
+				</div>
+				<br>
+				<br>
+				<div class="{{myForm.xiiscore.$valid}}">
+					<label for="xiiscore">12th Percentage</label>
+					<input type="number" id="xiiscore" step="0.2" ng-model="xiiscore" name="xiiscore" max="100" required>
+				</div>
+				<br>
+				<br>
+				<br>
+				<button type="submit">Submit</button>
+				<br>
+			</form>
+		</fieldset>
+	</body>
+	<script>
+		app=angular.module("myApp",[]);
+	</script>
+</html>

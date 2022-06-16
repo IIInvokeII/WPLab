@@ -1,0 +1,56 @@
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: bisque;
+    background-color: black;
+}
+li{
+    color:blue;
+    font-weight: 100;
+    background-color:crimson;
+}
+ul{
+    margin-left: 2cm;
+}
+body{
+    background-color: azure;
+    margin: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#doccont{
+    width: 80%;
+    margin-left: 250px;
+    padding: 12px;
+    border: 1px;
+    border-style: solid;
+    border-color: gray;
+    background-color: burlywood;
+}
+h1{
+    margin: 0%;
+    color: orange;
+}
+p{
+    margin-bottom: 0.75*font-size;
+    line-height: 1.5em;
+}
+#sidebar{
+    background-color: yellow;
+    border: 1px;
+    border-color: maroon;
+    border-style: dashed;
+    padding: 10px;
+    width:30%;
+}
+.texhigh{
+    background-color: yellow;
+    border: 1px;
+    border-style: solid;
+    border-color: palevioletred;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+}

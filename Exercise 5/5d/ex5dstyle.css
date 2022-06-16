@@ -1,0 +1,16 @@
+body{
+	font-family: Roboto;
+}
+.container{
+	width: 40%;
+}
+.true{
+	border: 5px solid green;
+	border-radius: 25px;
+	padding: 10px;
+}
+.false{
+	border: 5px solid red;
+	border-radius: 25px;
+	padding: 10px;
+}

@@ -1,0 +1,35 @@
+
+.tableClass td{
+    border:1px solid black;
+
+}
+
+.normal{
+    border:1px solid black !important;
+}
+
+.valid{
+    border: 1px solid blue !important;
+}
+
+.invalid{
+    border:1px solid red !important;
+}
+
+.table_final{
+    border:1px solid white;
+}
+
+
+.game
+{
+    position: relative;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+}

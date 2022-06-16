@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>15 puzzle</title>
+</head>
+
+<body>
+    <div class='game'>
+        <table class="tableClass">
+            <tr>
+                <td class='normal' id="1" onclick="action(this)"></td>
+                <td class='normal' id="2" onclick="action(this)">1</td>
+                <td class='normal' id="3" onclick="action(this)">2</td>
+                <td class='normal' id="4" onclick="action(this)">3</td>
+            </tr>
+            <tr>
+                <td class='normal' id="5" onclick="action(this)">4</td>
+                <td class='normal' id="6" onclick="action(this)">5</td>
+                <td class='normal' id="7" onclick="action(this)">6</td>
+                <td class='normal' id="8" onclick="action(this)">7</td>
+            </tr>
+            <tr>
+                <td class='normal' id="9" onclick="action(this)">8</td>
+                <td class='normal' id="10" onclick="action(this)">9</td>
+                <td class='normal' id="11" onclick="action(this)">10</td>
+                <td class='normal' id="12" onclick="action(this)">11</td>
+            </tr>
+            <tr>
+                <td class='normal' id="13" onclick="action(this)">12</td>
+                <td class='normal' id="14" onclick="action(this)">13</td>
+                <td class='normal' id="15" onclick="action(this)">14</td>
+                <td class='normal' id="16" onclick="action(this)">15</td>
+            </tr>
+
+        </table>
+        <button class="reset" onclick="randomize()">Reset</button>
+        <p class='hide' id='issue'> Not Adjacent!! </p>
+        <p class='hide' id='finished'> Congratulations!! </p>
+    </div>
+    <script defer src="script.js"></script>
+
+</body>
+
+</html>

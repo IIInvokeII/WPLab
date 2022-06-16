@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto';
+}
+
+.calc-container {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    /* border: 5px solid black; */
+}
+
+button, #display {
+    font-family: inherit;
+    font-size: large;
+}
+
+#display {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}

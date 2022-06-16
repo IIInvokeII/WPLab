@@ -1,0 +1,30 @@
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+	<style>
+		table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+    border:1px solid #00F;
+    font-size:12px;
+    }
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th> Name </th>
+			<th> CCNO </th>
+			<th> Expiry_Date </th>
+			<th> CVV </th>
+		</tr>
+		<tr ng-repeat="x in tableData track by $index">
+			<td> {{x.Name}} </td>
+			<td> {{x.CCNO}} </td>
+			<td> {{x.Expiry_Date}} </td>
+			<td> {{x.CVV}} </td>
+		</tr>
+	</table>
+	<a ng-href="#!/insert">Insert</a>
+</body>

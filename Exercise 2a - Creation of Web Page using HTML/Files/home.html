@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>
+		Login Page
+	</title>
+	<style>
+		body,
+		html {
+			height: 100%;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		#loginbox {
+			width: 700px;
+			border: 3px dotted bisque;
+			padding: 50px;
+			margin-left: 220px;
+			font-size: 25px;
+		}
+		label{
+			color:blue
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="bg-image"></div>
+	<div class="bg-text">
+		<h1 style="text-align: center; font-family: 'Courier New', Courier, monospace; color:chocolate; font-size:50px">
+			Time Table Reminder System
+		</h1>
+		<hr />
+		<form action="f1.html" target="_top" id="loginbox">
+			<h2 style="color: lime">Login</h2>
+			<label for="user">Username:</label>
+
+			<input type="text" name="user" id="user"> <br />
+			<label for="pass">Password:</label>
+
+			<input type="password" name="pass" id="pass"> <br />
+			<input type="submit">
+		</form>
+		<hr />
+	</div>
+</body>
+
+</html>

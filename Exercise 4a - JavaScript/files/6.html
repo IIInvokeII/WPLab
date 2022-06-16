@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+    <head>
+        <title>Factorials Table</title>
+        <meta charset="utf-8">
+        <!-- CSS styling: -->
+        <style type="text/css">
+            table
+            {
+                border-spacing: 0;
+                font-family: Consolas;
+                font-size: 1.2em;
+                text-align: right;
+            }
+        </style>
+        <!-- JavaScript code: -->
+        <script>
+            var n;
+ 
+            /* Starts table: */
+            document.writeln( "<table>" );
+ 
+            /* Table's head section: */
+            document.writeln( "<thead style='background-color: red; color: yellow'>" );
+            document.writeln( "<tr>" );
+            document.writeln( "<th>n</th>" );
+            document.writeln( "<th>n!</th>" );
+            document.writeln( "</tr>" );
+            document.writeln( "</thead>" );
+ 
+            /* Table's body section: */
+            document.writeln( "<tbody>" );
+            for ( n = 0 ; n <= 20 ; ++n )
+            {
+                if ( n % 2 == 0 ) /* Starts new row with black background and white font: */
+                {
+                    document.writeln( "<tr style='background-color: black; color: white;'>" );
+                }
+                else /* Starts new row with blue background and yellow font: */
+                {
+                    document.writeln( "<tr style='background-color: blue; color: yellow;'>" );
+                }
+ 
+                /* First column of the current row: */
+                document.writeln( "<td>" + n + "</td>" );
+ 
+                /* Second column of the current row: */
+                document.writeln( "<td>" + factorial( n ) + "</td>" );
+ 
+                /* Finishes current row: */
+                document.writeln( "</tr>" );
+            }
+            document.writeln( "</tbody>" );
+ 
+            /* Finishes table: */
+            document.writeln( "</table>" );
+ 
+            /* Calculates n!: */
+            function factorial( n )
+            {
+                var counter;
+                var fact = 1;
+ 
+                if ( n < 0 ) /* Invalid argument to function factorial. */
+                {
+                    return -1;
+                }
+                else
+                {
+                    if ( n >= 1 )
+                    {
+                        for ( counter = 2 ; counter <= n ; ++counter )
+                        {
+                            fact *= counter;
+                        }
+                    }
+ 
+                    return fact;
+                }
+            }
+        </script>
+    </head>
+ 
+    <body></body>
+</html>

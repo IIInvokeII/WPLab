@@ -1,0 +1,27 @@
+<div ng-controller="mainController" style="padding-left:10px;">
+	<h1 style="text-align:center;"><u>ToDo list</u></h1>
+	<br>
+	<p>Name: <input type="text" ng-model="name"></p>
+	<br>
+	<h4>Welcome <b>{{name}}</b></h4>
+
+	<hr>
+
+	<br>
+
+	<div style="border: 1px solid black; padding:10px 10px 10px 10px;">
+		<p>Enter task here: <input type="text" ng-model="task"> <input type="submit" value="Add Task" ng-click="addTask(task)"></p>
+		<p>Tasks Pending!</p>
+		<ol>
+			<li ng-repeat="task in task_list">{{task}}</li>
+		</ol>
+	</div>
+	<br>
+	<div style="border: 1px solid black; padding:10px 10px 10px 10px;">
+		<p>Enter task number completed: <input type="number" ng-model="del_task"> <input type="submit" value="Completed Task" ng-click="deltask(del_task)"></p>
+		<p>Tasks Completed!</p>
+		<ol>
+			<li ng-repeat="task in completed_task_list">{{task}}</li>
+		</ol>
+	</div>
+</div>

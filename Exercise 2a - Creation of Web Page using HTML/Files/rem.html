@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Time Table Reminder System">
+		<meta name="keywords" content="HTML">
+		<meta name="author" content="Badri MSV">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<title>
+		Reminders Page
+	</title>
+	<body>
+		<h1>Time Table Reminder System</h1>
+		<hr />
+		<p>
+			<a href="f1.html">Time Table</a> || 
+			<a href="rem.html">Reminders</a> || 
+			<a href="home.html">Log Out</a>
+		</p>
+		<hr />
+		<h2>Reminders</h2>
+		<form action="home.html">
+			<label for="remname">Reminder Title:</label>
+			<input type="text" name="remname" id="remname"> <br />
+			<label for="remtype">Reminder Type:</label>
+			<select name="remtype" id="remtype" size="1">
+				<option>Personal
+				<option>Course
+				<option>Department
+				<option>Homework
+			</select> <br />
+			<label for="remdetails">Reminder Details:</label>
+			<input type="text-area" name="remdetails" id="remdetails"> <br />
+			<p>Will you require email notification?</p>
+			<input type="radio" name="remyesno" id="remyes">
+			<label for="remyes">Yes</label>
+			<input type="radio" name="remyesno" id="remyno">
+			<label for="remno">No</label> <br />
+			<input type="checkbox" name="urgent" id="urgent"> 
+			<label for="urgent">Is it Urgent?</label><br />
+			<input type="reset"><input type="submit">
+		</form>
+		<hr>
+	</body>
+</html>

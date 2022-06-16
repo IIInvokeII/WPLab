@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<base target="_top">
+		<meta charset="UTF-8">
+		<meta name="description" content="Time Table Reminder System">
+		<meta name="keywords" content="HTML">
+		<meta name="author" content="Badri MSV">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<title>
+		Time Table Page
+	</title>
+	<body>
+		<h1>Time Table Reminder System</h1>
+		<hr />
+		<p>
+			<a href="f1.html">Time Table</a> || 
+			<a href="rem.html">Reminders</a> || 
+			<a href="home.html">Log Out</a>
+		</p>
+		<hr />
+		<h2><a id="timetable">Time Table</a></h2>
+		<table border="2" cellpadding="10" cellspacing="5" span>
+			<tr bgcolor="grey">
+				<th>Day/Period</th>
+				<th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+			</tr>
+			<tr>
+				<th bgcolor="grey">Monday</th>
+				<td>Principles of Compiler Design</td>
+				<td>Big Data Engineering</td>
+				<td bgcolor="green" rowspan="3">Break</td>
+				<td>Open Elective</td>
+				<td bgcolor="green" rowspan="4">Lunch</td>
+				<td>Web Programming</td>
+				<td colspan="2">Interpersonal Skills/Listening and Speaking</td>
+			</tr>
+			<tr>
+				<th bgcolor="grey">Tuesday</th>
+				<td>Web Programming</td>
+				<td>Machine Learning</td>
+				<td>Principles of Compiler Design</td>
+				<td colspan="3">Web Programming Lab<img src="wp.png" height="40" width ="45" usemap="#map1"></td>
+				<map name="map1">
+					<area shape="circle" coords="20,20,15" href="https://lms.ssn.edu.in/course/view.php?id=4985">
+				</map>
+			</tr>
+			<tr>
+				<th bgcolor="grey">Wednesday</th>
+				<td>Open Elective</td>
+				<td>Principles of Compiler Design</td>
+				<td>Machine Learning</td>
+				<td>Professional Elective</td>
+				<td colspan="2">PCD/ML - Lab</td>
+			</tr>
+			<tr>
+				<th bgcolor="grey">Thursday</th>
+				<td>Professional Elective</td>
+				<td colspan="3">PCD/ML - Lab</td>
+				<td>Big Data Engineering</td>
+				<td>Mentor</td>
+			</tr>
+			<tr>
+				<th bgcolor="grey">Friday</th>
+			</tr>
+		</table>
+		<hr />
+		<h3>List of subjects and faculty:</h3>
+		<ol type="1">
+			<li>
+				UIT1601
+				<ul type="disc">
+					<li>Principles of Compiler Design</li>
+					<li>Josephine Julina</li>
+				</ul>
+			</li>
+			<li>
+				UIT1602
+				<ul type="disc">
+					<li>Web Progamming</li>
+					<li>S Sasirekha</li>
+				</ul>
+			</li>
+			<li>
+				UIT1603
+				<ul type="disc">
+					<li>Big Data Engineering</li>
+					<li>K S Gayathri</li>
+				</ul>
+			</li>
+			<li>
+				UIT1604
+				<ul type="disc">
+					<li>Machine Learning Fundamentals</li>
+					<li>A Shahina</li>
+				</ul>
+			</li>
+			<li>
+				<a id="4">UIT1611</a>
+				<ul type="disc">
+					<li>Web Programming Lab</li>
+					<li>S Sasirekha</li>
+				</ul>
+			</li>
+		</ol>
+		<hr />
+	</body>
+</html>

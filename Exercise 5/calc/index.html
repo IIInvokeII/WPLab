@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Calculator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="calcApp" ng-controller="arithmeticController">
+    <h1>Basic Calculator</h1>
+    <div class="calc-container">
+
+        <input type="text" id="display" value="{{ expr }}" ng-model="expr">
+
+        <button ng-click="modifyExpr('')">C</button>
+        <button></button>
+        <button></button>
+        <button ng-click="modifyExpr('/')">/</button>
+
+        <button ng-click="modifyExpr('7')">7</button>
+        <button ng-click="modifyExpr('8')">8</button>
+        <button ng-click="modifyExpr('9')">9</button>
+        <button ng-click="modifyExpr('*')">*</button>
+
+        <button ng-click="modifyExpr('4')">4</button>
+        <button ng-click="modifyExpr('5')">5</button>
+        <button ng-click="modifyExpr('6')">6</button>
+        <button ng-click="modifyExpr('-')">-</button>
+
+        <button ng-click="modifyExpr('1')">1</button>
+        <button ng-click="modifyExpr('2')">2</button>
+        <button ng-click="modifyExpr('3')">3</button>
+        <button ng-click="modifyExpr('+')">+</button>
+
+        <button ng-click="modifyExpr('.')">.</button>
+        <button ng-click="modifyExpr('0')">0</button>
+        <button ng-click="modifyExpr('<')">&lt</button>
+        <button ng-click="evaluate()">=</button>
+    </div>
+</body>
+
+</html>

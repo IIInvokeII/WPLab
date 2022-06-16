@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Inline CSS
+        </title>
+    </head>
+    <body>
+        <h1 style="color:blueviolet">
+            For example inline.html:
+        </h1>
+        <hr color=cyan />
+        <h2 style="color:green">
+            Inline styles that declare an individual element format using attribute style
+        </h2>
+        <hr color=cyan />
+        <p style="color:brown;font-family:Georgia">
+            1. Applies inline style to p elements to alter their font size & color.
+        </p>
+        <hr color=cyan />
+        <p style="color:red;font-size:70px;">
+            2. Font color: <em>use color name (RED...)</em> or hexadecimal code ( #000ff)
+        </p>
+        <hr color=cyan />
+        <p style="color:chocolate">
+            3. Include <em>em</em> Tag <br />
+            em tag has <em>been included!</em>
+        </p>
+		<p style="color:red;font-size:200px;">
+            EXERCISE 3
+        </p>
+        <hr color=cyan />
+    </body>
+</html>
