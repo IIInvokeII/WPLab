@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="tables.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<title>
+    Time Table Page
+</title>
+
+<body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/login">Log Out</a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Reminder</button>
+                        <div class="dropdown-content">
+                            <a href="/addreminder">Add</a>
+                            <a href="/viewreminder">View</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Time Tables</button>
+                        <div class="dropdown-content">
+                            <a href="/timeita">IT-A</a>
+                            <a href="/timeitb">IT-B</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    <h1>IT - B</h1>
+<table style="border:2px;" cellpadding="10" cellspacing="5">
+	<tr class="day">
+		<th>Day/Period</th>
+		<th>1</th>
+		<th>2</th>
+		<th>3</th>
+		<th>4</th>
+		<th>5</th>
+		<th>6</th>
+		<th>7</th>
+		<th>8</th>
+	</tr>
+	<tr>
+		<th class="day">Monday</th>
+		<th class="pcd">Principles of Compiler Design</th>
+		<th class="bde">Big Data Engineering</th>
+		<th class="oe">Open Elective</th>
+		<th class="break" rowspan="5">Lunch</th>
+		<th class="lab" colspan="3">PCD/ML - Lab</th>
+		<th class="wp">Web Programming Lab</th>
+	</tr>
+	<tr>
+		<th class="day">Tuesday</th>
+		<th class="wp">Web Programming</th>
+		<th class="lab" colspan="2">PCD/ML - Lab</th>
+		<th class="bde">Big Data Engineering</th>
+		<th class="break" rowspan="2">Break</th>
+		<th class="ml">Machine Learning</th>
+		<th class="break">Mentor</th>
+	</tr>
+	<tr>
+		<th class="day">Wednesday</th>
+		<th class="oe">Open Elective</th>
+		<th class="pcd">Principles of Compiler Design</th>
+		<th class="wp">Web Programming</th>
+		<th class="pe">Professional Elective</th>
+		<th class="isls" colspan="2">Interpersonal Skills/Listening and Speaking</th>
+	</tr>
+	<tr>
+		<th class="day">Thursday</th>
+		<th class="ml">Machine Learning</th>
+		<th class="pe">Professional Elective</th>
+		<th class="pcd">Principles of Compiler Design</th>
+		<th class="wp" colspan="4">Web Programming Lab</th>
+	</tr>
+	<tr>
+		<th class="day">Friday</th>
+		<th class="bde">Big Data Engineering</th>
+		<th class="wp">Web Programming</th>
+		<th class="pe">Professional Elective</th>
+		<th class="ml">Machine Learning</th>
+		<th class="break">Break</th>
+		<th class="oe">Open Elective</th>
+		<th class="break">Club Activities</th>
+	</tr>
+</table>
+    </div>
+</body>
+
+</html>

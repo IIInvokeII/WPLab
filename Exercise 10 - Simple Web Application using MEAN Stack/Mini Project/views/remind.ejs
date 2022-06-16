@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reminder System</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script type="text/javascript">
+        function validate() {
+            var rname = document.getElementById("remname");
+            //var rtype = document.getElementById("remtype");
+            var rdetails = document.getElementById("remdetails");
+
+            if (rname.value == "") {
+                window.alert("Reminder Name should not be empty.");
+                rname.focus();
+                return false;
+            }
+            if (rdetails.value == "") {
+                window.alert("Reminder Details should not be empty.");
+                rdetails.focus();
+                return false;
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <nav>
+        <ul>
+            <li>
+                <a href="/login">Log Out</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Reminder</button>
+                    <div class="dropdown-content">
+                        <a href="/addreminder">Add</a>
+                        <a href="/viewreminder">View</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Time Tables</button>
+                    <div class="dropdown-content">
+                        <a href="/timeita">IT-A</a>
+                        <a href="/timeitb">IT-B</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="bg-text">
+        <div style="font-family: sans-serif;">
+            <form action="/addnewrem" method="post">
+                <table cellpadding="30px" cellspacing="2px">
+                    <tr>
+                        <th><label for="remname">Reminder Title</label></th>
+                        <td><input type="text" name="remname" id="remname" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="remtype">Reminder Type</label></th>
+                        <td>
+                            <select name="remtype" id="remtype" size="1">
+                                <option>Personal
+                                <option>Course
+                                <option>Department
+                                <option>Homework
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="remdetails">Reminder Details</label></th>
+                        <td><input type="text-area" name="remdetails" id="remdetails" required></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="submit">
+                            <input type="reset"><input type="submit" onsubmit="validate();">
+                        </th>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

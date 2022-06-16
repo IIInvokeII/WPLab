@@ -1,0 +1,22 @@
+{
+    "name": "dynamic-app",
+    "version": "1.0.0",
+    "description": "A dynamic built using Node.js and express",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "badri",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.16",
+        "mongodb":"^4.7.0",
+        "prompt-sync":"^4.2.0"
+    },
+    "keywords": [
+        "Group",
+        "Chat"
+    ]
+}

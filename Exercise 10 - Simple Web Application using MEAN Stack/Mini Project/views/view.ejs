@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reminder System</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "http://localhost:3000/rems";
+        var reminders = []
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                reminders = JSON.parse(this.responseText);
+                populateTable(reminders);
+            }
+        }
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+        function populateTable(reminders) {
+            var rem_out = "";
+            for (var i = 0; i < reminders.length; i++) {
+                rem_out += "<tr>";
+                rem_out += "<td>" + reminders[i].name + "</td>";
+                rem_out += "<td>" + reminders[i].type + "</td>";
+                rem_out += "<td>" + reminders[i].details + "</td>";
+                rem_out += "</tr>";
+            }
+            document.getElementById("rem_list").innerHTML = rem_out;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <nav>
+        <ul>
+            <li>
+                <a href="/login">Log Out</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Reminder</button>
+                    <div class="dropdown-content">
+                        <a href="/addreminder">Add</a>
+                        <a href="/viewreminder">View</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Time Tables</button>
+                    <div class="dropdown-content">
+                        <a href="/timeita">IT-A</a>
+                        <a href="/timeitb">IT-B</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="bg-text">
+        <div style="font-family: sans-serif;">
+            <table cellspacing="2px" style="width: auto">
+                <tr>
+                    <th>Reminder Title</th>
+                    <th>Reminder Type</th>
+                    <th>Reminder Details</th>
+                </tr>
+                <tbody id="rem_list"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
